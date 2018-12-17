@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include "CrossApp.h"
+#include "BottomBar.h"
 
 USING_NS_CC;
 

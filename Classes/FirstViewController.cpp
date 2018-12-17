@@ -109,6 +109,12 @@ void FirstViewController::viewDidLoad()
          
     //½«pageViewTestÌíµ½ÆÁÄ»ÏÔÊ¾
     this->getView()->addSubview(pageViewTest);
+
+
+	BottomBar* bottomBar=new BottomBar();
+	//bottomBar->init();
+	this->getView()->addSubview(bottomBar);
+	bottomBar->release();
 }
 
 void FirstViewController::viewDidUnload()
