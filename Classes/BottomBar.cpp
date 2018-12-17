@@ -1,4 +1,4 @@
-#include "BottomBar.h"
+ï»¿#include "BottomBar.h"
 
 BottomBar::BottomBar()
 {
@@ -14,7 +14,7 @@ void BottomBar::onEnter(){
 	CCLog("===123");
 	DRect r=this->getBounds();
 	CAButton* btn=CAButton::createWithCenter(r,CAButton::Type::SquareRect);
-	btn->setTitleForState(CAControl::State::Normal,UTF8("·ÖÀà"));
+	btn->setTitleForState(CAControl::State::Normal,UTF8("åˆ†ç±»"));
 	btn->setColor(CAColor4B::GREEN);
 	btn->setFrame(DRect(100,500,200,80));
 	this->addSubview(btn);

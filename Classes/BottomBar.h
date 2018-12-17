@@ -1,4 +1,4 @@
-#ifndef __HelloCpp__BottomBar__
+﻿#ifndef __HelloCpp__BottomBar__
 #define __HelloCpp__BottomBar__
 
 #include <iostream>

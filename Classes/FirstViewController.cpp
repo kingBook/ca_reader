@@ -1,4 +1,4 @@
-
+ï»¿
 #include "FirstViewController.h"
 
 FirstViewController::FirstViewController()
@@ -35,79 +35,79 @@ void FirstViewController::viewDidLoad()
     this->getView()->addSubview(label);*/
 
 
-	//ÉúÃüÒ»¸öCAVector×÷ÎªÌí¼Óµ½PageViewµÄÈİÆ÷
+	//ç”Ÿå‘½ä¸€ä¸ªCAVectorä½œä¸ºæ·»åŠ åˆ°PageViewçš„å®¹å™¨
     CAVector<CAView*> viewVector;
      
-    //»ñµÃÆÁÄ»µÄrect
+    //è·å¾—å±å¹•çš„rect
     DRect winRect = this->getView()->getBounds();
          
-    //´´½¨CALabel
+    //åˆ›å»ºCALabel
     CALabel* labelView = CALabel::createWithFrame(winRect);
      
-    //ÉèÖÃÎª¾ÓÖĞ
+    //è®¾ç½®ä¸ºå±…ä¸­
     labelView->setTextAlignment(CATextAlignment::Center);
     labelView->setVerticalTextAlignmet(CAVerticalTextAlignment::Center);
     labelView->setFontSize(75);
      
-    //ÉèÖÃÎÄ±¾ÄÚÈİ
-    labelView->setText(UTF8("µÚÒ»¸öView"));
+    //è®¾ç½®æ–‡æœ¬å†…å®¹
+    labelView->setText(UTF8("ç¬¬ä¸€ä¸ªView"));
          
-    //´´½¨CAImageView
+    //åˆ›å»ºCAImageView
     CAImageView* imageView = CAImageView::createWithImage(CAImage::create("r/HelloWorld.png"));
      
-    //ÉèÖÃÏÔÊ¾ÇøÓò
+    //è®¾ç½®æ˜¾ç¤ºåŒºåŸŸ
     imageView->setFrame(winRect);
 
-	//°ñµ¥view
+	//æ¦œå•view
 	CAView* bangdanView=CAView::createWithFrame(winRect);
 	CALabel* bangdanLabel=CALabel::createWithFrame(winRect);
 	bangdanLabel->setTextAlignment(CATextAlignment::Center);            
     bangdanLabel->setVerticalTextAlignmet(CAVerticalTextAlignment::Center);
     bangdanLabel->setFontSize(75);
-    bangdanLabel->setText(UTF8("°ñµ¥View"));
+    bangdanLabel->setText(UTF8("æ¦œå•View"));
 	bangdanView->addSubview(bangdanLabel);
      
-    //´´½¨Ò»¸öÀ¶É«µÄView
+    //åˆ›å»ºä¸€ä¸ªè“è‰²çš„View
     CAView* view = CAView::createWithColor(CAColor_blue);
          
-    //ÉèÖÃÏÔÊ¾ÇøÓò
+    //è®¾ç½®æ˜¾ç¤ºåŒºåŸŸ
     view->setFrame(winRect);
      
-    //´´½¨CALabel
+    //åˆ›å»ºCALabel
     CALabel* lastLabel = CALabel::createWithFrame(winRect);
          
-    //ÉèÖÃ¾ÓÖĞ
+    //è®¾ç½®å±…ä¸­
     lastLabel->setTextAlignment(CATextAlignment::Center);            
     lastLabel->setVerticalTextAlignmet(CAVerticalTextAlignment::Center);
     lastLabel->setFontSize(75);
      
-    //ÉèÖÃÏÔÊ¾ÎÄ±¾
-    lastLabel->setText(UTF8("×îºóÒ»¸öView"));
+    //è®¾ç½®æ˜¾ç¤ºæ–‡æœ¬
+    lastLabel->setText(UTF8("æœ€åä¸€ä¸ªView"));
          
-    //½«lastLabelÌí¼Óµ½view
+    //å°†lastLabelæ·»åŠ åˆ°view
     view->addSubview(lastLabel);
          
-    //½«ÉÏÃæµÄÈı¸ö¿Ø¼ş·ÅÈëµ½CAVectorÈİÆ÷ÄÚ
+    //å°†ä¸Šé¢çš„ä¸‰ä¸ªæ§ä»¶æ”¾å…¥åˆ°CAVectorå®¹å™¨å†…
     viewVector.pushBack(labelView);
     viewVector.pushBack(imageView);
     viewVector.pushBack(bangdanView);
     viewVector.pushBack(view);
          
-    /*´´½¨Ò»¸öCAPageView²¢ÉèÖÃÎªË®Æ½¹ö¶¯
-    CAPageViewDirectionHorizontal:Ë®Æ½
-    CAPageViewDirectionVertical:ÊúÖ±
+    /*åˆ›å»ºä¸€ä¸ªCAPageViewå¹¶è®¾ç½®ä¸ºæ°´å¹³æ»šåŠ¨
+    CAPageViewDirectionHorizontal:æ°´å¹³
+    CAPageViewDirectionVertical:ç«–ç›´
     */
          
     CAPageView* pageViewTest = CAPageView::createWithCenter(DRect(winRect.size.width*0.5, winRect.size.height*0.5, winRect.size.width, winRect.size.height), CAPageView::Orientation::Horizontal);
         
-    //ÉèÖÃ¼àÌı
+    //è®¾ç½®ç›‘å¬
     pageViewTest->setPageViewDelegate(this);
      
-    //½«CAVectorÌí¼Óµ½pageViewTest
+    //å°†CAVectoræ·»åŠ åˆ°pageViewTest
     pageViewTest->setViews(viewVector);
     pageViewTest->getPageCount();
          
-    //½«pageViewTestÌíµ½ÆÁÄ»ÏÔÊ¾
+    //å°†pageViewTestæ·»åˆ°å±å¹•æ˜¾ç¤º
     this->getView()->addSubview(pageViewTest);
 
 
